@@ -23,8 +23,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/10">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-accent/10">
+      {/* Contenido Principal */}
+      <main className="flex-grow container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
             Imaginaitor
@@ -95,7 +96,34 @@ const Index = () => {
             </Tabs>
           </div>
         )}
-      </div>
+      </main>
+
+      {/* Footer Adaptado */}
+      <footer className="border-t border-border bg-card mt-16">
+        <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-center md:text-left text-muted-foreground text-sm">
+            Aitor Sánchez Gutiérrez &copy; 2026 - Reservados todos los derechos
+          </p>
+          <div className="flex items-center gap-6 text-sm">
+            <a 
+              href="https://aitorsanchez.pages.dev/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+            >
+              Blog
+            </a>
+            <a 
+              href="https://aitorhub.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+            >
+              Más apps
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
